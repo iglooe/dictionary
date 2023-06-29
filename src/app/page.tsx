@@ -79,7 +79,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-2 list-none">
               <button
                 onClick={toggleTheme}
-                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-black rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-700 active:bg-gray-800 active:text-white focus-visible:outline-black"
+                className="inline-flex items-center justify-center px-3 py-2 text-sm font-semibold bg-none rounded-full group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:outline active:bg-gray-400 active:text-white focus-visible:outline-black"
               >
                 {theme === "light" ? (
                   <>
@@ -89,7 +89,24 @@ export default function Home() {
                       height="24"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="currentColor"
+                      stroke={getFillColor()}
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      id="moon"
+                    >
+                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                  </>
+                ) : (
+                  <>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke={getFillColor()}
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -104,23 +121,6 @@ export default function Home() {
                       <line x1="21" y1="12" x2="23" y2="12"></line>
                       <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                  </>
-                ) : (
-                  <>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      id="moon"
-                    >
-                      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                   </>
                 )}
