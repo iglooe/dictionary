@@ -1,5 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { ListProp } from "../types";
+import { merriweather } from "../fonts";
+
 export default function List({ list }: ListProp) {
   return (
     <>
@@ -13,8 +15,10 @@ export default function List({ list }: ListProp) {
       {list.map(
         (item: any) =>
           item.example && (
-            <div className="my-5" key={uuidv4()}>
-              <q className="ml-4">{item.example}</q>
+            <div className="my-4 tracking-tight" key={uuidv4()}>
+              <q className={`${merriweather.className} font-thin`}>
+                {item.example}
+              </q>
             </div>
           )
       )}

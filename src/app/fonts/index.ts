@@ -1,4 +1,4 @@
-import { Inter, Lato, Space_Mono } from "next/font/google";
+import { Inter, Lato, Space_Mono, Merriweather } from "next/font/google";
 
 export const lato = Lato({
   subsets: ["latin"],
@@ -13,4 +13,9 @@ export const spaceMono = Space_Mono({
 export const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+export const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
 });

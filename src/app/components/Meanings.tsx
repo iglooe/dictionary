@@ -9,12 +9,11 @@ export default function Meanings({ meanings }: MeaningProp) {
       {meanings.map((meaning: any) => (
         <div key={uuidv4()}>
           <div className="flex items-center mt-4">
-            <p className="italic font-bold text-fuchsia-400">
+            <p className="italic font-bold text-fuchsia-400 text-xl">
               {meaning?.partOfSpeech}
             </p>
             <hr className="w-full border-line ml-5 dark:border-slate-200/80" />
           </div>
-          <p className="text-grayCustom  text-lg mt-8">Meaning</p>
           <List list={meaning?.definitions} />
           <div
             className={
@@ -24,12 +23,12 @@ export default function Meanings({ meanings }: MeaningProp) {
             }
           >
             {meaning?.synonyms.length > 0 && (
-              <p className="text-lime-400 flex py-2 items-center flex-wrap font-semibold">
+              <p className="text-lime-400 flex py-2 items-center flex-wrap font-extrabold">
                 Synonyms
                 {meaning?.synonyms.map((item: any) => (
                   <span
                     key={uuidv4()}
-                    className={`${spaceMono.className} font-normal ml-4 text-white inline-block bg-gradient-to-b from-transparent to-gray-600/20 px-2 py-2 rounded-full border border-gray-600/10`}
+                    className={`${spaceMono.className} font-normal ml-4 text-lime-200 inline-block bg-gradient-to-b from-transparent to-gray-600/20 px-2 py-2 rounded-full border border-gray-600/10`}
                   >
                     {item}
                   </span>
@@ -37,12 +36,12 @@ export default function Meanings({ meanings }: MeaningProp) {
               </p>
             )}
             {meaning?.antonyms.length > 0 && (
-              <p className="text-red-500">
+              <p className="text-red-500 flex py-2 items-center flex-wrap font-extrabold">
                 Antonyms
                 {meaning?.antonyms.map((item: any) => (
                   <span
                     key={uuidv4()}
-                    className="text-purpleCustom font-bold ml-5 inline-block"
+                    className={`${spaceMono.className} font-normal ml-4 text-red-200 inline-block bg-gradient-to-b from-transparent to-gray-600/20 px-2 py-2 rounded-full border border-gray-600/10`}
                   >
                     {item}
                   </span>

@@ -135,7 +135,7 @@ export default function Search() {
         </div>
       </form>
       <p className={`text-red-500 ${isEmpty ? "block" : "hidden"}`}>
-        Nice try bucko, but let's get some characters in…
+        Nice try bucko
       </p>
       {error ? (
         <div className="flex flex-col justify-center items-center mt-28">
