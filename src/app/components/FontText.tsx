@@ -1,17 +1,11 @@
-interface Prop {
-  index: number;
-  fontName: string;
-  active: boolean;
-  onClick: Function;
-  className: string;
-}
+import { FontTextProp } from "../types";
 export default function FontText({
   index,
   fontName,
   active,
   onClick,
   className,
-}: Prop) {
+}: FontTextProp) {
   const onClickHandler = (e: any) => {
     e.stopPropagation();
     onClick(index);

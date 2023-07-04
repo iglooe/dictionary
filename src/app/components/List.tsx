@@ -1,11 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
-interface Prop {
-  list: Array<Object>;
-}
-export default function List({ list }: Prop) {
+import { ListProp } from "../types";
+export default function List({ list }: ListProp) {
   return (
     <>
-      <ul className="ml-10 list-disc marker:text-purpleCustom">
+      <ul className="ml-10 list-disc space-y-1 marker:text-slate-50/50">
         {list.map((item: any, index: any) => (
           <li className="mt-3" key={uuidv4()}>
             {item.definition}
@@ -16,7 +14,7 @@ export default function List({ list }: Prop) {
         (item: any) =>
           item.example && (
             <div className="my-5" key={uuidv4()}>
-              <q className="ml-10 dark:text-grayCustom">{item.example}</q>
+              <q className="ml-4">{item.example}</q>
             </div>
           )
       )}
