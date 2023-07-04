@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
-import { ListProp } from "../types";
-import { merriweather } from "../fonts";
+import type { ListProp } from "@/types/index";
+import { merriweather } from "@/lib/fonts";
 
 export default function List({ list }: ListProp) {
   return (

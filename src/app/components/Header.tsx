@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { inter } from "../fonts/";
 import { useTheme } from "next-themes";
-import { HeaderProp } from "../types";
+import { inter } from "@/lib/fonts";
+import { HeaderProp } from "@/types/index";
 
 export default function Header({}: HeaderProp) {
   const [open, setOpen] = useState(false);

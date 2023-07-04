@@ -1,4 +1,5 @@
-import { FontTextProp } from "../types";
+import { FontTextProp } from "@/types/index";
+
 export default function FontText({
   index,
   fontName,

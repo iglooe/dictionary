@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import Meanings from "./Meanings";
 import { useTheme } from "next-themes";
-import { lato, spaceMono } from "../fonts";
+import Image from "next/image";
+import Meanings from "@/components/Meanings";
+import { lato, spaceMono } from "@/lib/fonts";
 
 export default function Search() {
   // https://api.dictionaryapi.dev/api/v2/entries/en/keyboard

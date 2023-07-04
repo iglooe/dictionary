@@ -1,26 +1,26 @@
 import { MouseEventHandler } from "react";
 
-export interface FontTextProp {
+export type FontTextProp = {
   index: number;
   fontName: string;
   active: boolean;
   onClick: Function;
   className: string;
-}
+};
 
-export interface HeaderProp {
+export type HeaderProp = {
   onClick: MouseEventHandler<HTMLDivElement>;
   checked: boolean | undefined;
   fontIndex: number;
   fontIndexChangeHandler: Function;
   isMenuOpened: boolean;
   fontChangeHandler: MouseEventHandler<HTMLDivElement>;
-}
+};
 
-export interface ListProp {
+export type ListProp = {
   list: Array<Object>;
-}
+};
 
-export interface MeaningProp {
+export type MeaningProp = {
   meanings: Array<Object>;
-}
+};

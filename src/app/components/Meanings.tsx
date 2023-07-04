@@ -1,7 +1,7 @@
-import List from "./List";
 import { v4 as uuidv4 } from "uuid";
-import { MeaningProp } from "../types";
-import { inter, spaceMono } from "../fonts";
+import List from "@/components/List";
+import { MeaningProp } from "@/types/index";
+import { inter, spaceMono } from "@/lib/fonts";
 
 export default function Meanings({ meanings }: MeaningProp) {
   return (
