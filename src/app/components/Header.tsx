@@ -1,9 +1,31 @@
+import Image from "next/image";
+import { MouseEventHandler, useEffect, useState } from "react";
+import Toggle from "./Toggle";
+import FontText from "./FontText";
+import { Inter, Inconsolata, Lora } from "next/font/google";
 import { useTheme } from "next-themes";
-import * as React from "react";
-import { useState } from "react";
 
-export function Nav() {
-  // mobile menu
+const inter = Inter({ subsets: ["latin"] });
+const inconsolata = Inconsolata({ subsets: ["latin"] });
+const lora = Lora({ subsets: ["latin"] });
+
+interface Prop {
+  onClick: MouseEventHandler<HTMLDivElement>;
+  checked: boolean | undefined;
+  fontIndex: number;
+  fontIndexChangeHandler: Function;
+  isMenuOpened: boolean;
+  fontChangeHandler: MouseEventHandler<HTMLDivElement>;
+}
+
+export default function Header({
+  checked,
+  onClick,
+  fontIndex,
+  fontIndexChangeHandler,
+  isMenuOpened,
+  fontChangeHandler,
+}: Prop) {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
     setOpen(!open);
@@ -14,13 +36,12 @@ export function Nav() {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
-  /* 
+  /*
     SVG's don't work well with light and dark mode. This was my solution
     */
   const getFillColor = () => {
     return theme === "light" ? "#1c1b22" : "#fff";
   };
-
   return (
     <div className="w-full mx-auto bg-transparent border-b 2xl:max-w-7xl">
       <div className="relative flex flex-col w-full p-5 mx-auto bg-transparent md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
