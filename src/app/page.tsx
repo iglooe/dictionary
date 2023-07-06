@@ -1,7 +1,6 @@
 "use client";
 import Header from "./components/Header";
 import Search from "./components/Search";
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 import { Inter, Inconsolata, Lora } from "next/font/google";
@@ -10,33 +9,14 @@ const lora = Lora({ subsets: ["latin"] });
 const inconsolata = Inconsolata({ subsets: ["latin"] });
 
 export default function Home() {
-  const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const currentTheme = theme === "system" ? systemTheme : theme;
-  const [checked, setChecked] = useState(
-    currentTheme === "dark" ? true : false
-  );
-
   const [fontIndex, setFontIndex] = useState(1);
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-
-  const fontIndexChangeHandler = (index: number) => {
-    setFontIndex(index);
-  };
 
   useEffect(() => {
     setMounted(true);
   }, []);
   if (!mounted) return null;
-
-  const clickHandler = () => {
-    setChecked(!checked);
-    setTheme(!checked ? "dark" : "light");
-  };
-
-  const fontChangeHandler = () => {
-    setIsMenuOpened(!isMenuOpened);
-  };
 
   return (
     <>
@@ -58,15 +38,7 @@ export default function Home() {
             : inconsolata.className
         }`}
       >
-        <Header
-          checked={checked}
-          onClick={clickHandler}
-          fontIndex={fontIndex}
-          fontIndexChangeHandler={fontIndexChangeHandler}
-          isMenuOpened={isMenuOpened}
-          fontChangeHandler={fontChangeHandler}
-        />
-        <Search />
+        <Header />
       </div>
     </>
   );
