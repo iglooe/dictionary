@@ -45,7 +45,7 @@ export default function WordResult({ word }: any) {
                   }
                 }
                 if (!audioUrl[0]?.audio) {
-                  alert("hi");
+                  alert("oops, no audio for this word!");
                 }
               }}
             >

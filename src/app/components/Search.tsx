@@ -54,9 +54,8 @@ export default function Search() {
     setError(false);
   }
 
-  /*
-    persistent svg color
-  */
+  // persistent svg color
+
   const theme = useTheme().theme;
 
   const getFillColor = () => {
