@@ -3,7 +3,7 @@ import React from "react";
 // helper function
 import { useTheme } from "next-themes";
 
-const getFillColor = () => {
+const GetFillColor = () => {
   const { theme } = useTheme();
   return theme === "light" ? "#1c1b22" : "#fff";
 };
@@ -17,7 +17,7 @@ export const Sun = () => {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -44,7 +44,7 @@ export const Moon = () => {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -63,7 +63,7 @@ export const HeroIcon = () => {
       height="36"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -82,7 +82,7 @@ export const SearchSVG = () => {
       height="36"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -101,7 +101,7 @@ export const Menu = () => {
       height="36"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -121,7 +121,7 @@ export const Play = () => {
       height="18"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -141,7 +141,7 @@ export const Speaker = () => {
       height="18"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -180,7 +180,7 @@ export const GithubSVG = () => {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke={getFillColor()}
+      stroke={GetFillColor()}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
